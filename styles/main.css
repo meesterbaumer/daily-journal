@@ -1,3 +1,49 @@
 body {
   background-color: slategray;
 }
+
+header {
+  display: flex;
+  padding: 10px;
+  border: 5px solid red;
+}
+
+.logoContainer {
+  width: 20%;
+  padding: 10px;
+  
+}
+.siteLogo {
+  width: 100%;
+  padding: 10px;
+  
+}
+.headerRightTop {
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  border: 5px solid red;
+  justify-content: space-evenly;
+}
+
+.writingsOfImage {
+  width: 20%;
+  padding: 30px;
+}
+
+.headerRightContainer {
+  width: 80%;
+  padding: 10px;
+}
+.headerRightBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.currentUser {
+  font-size: 6rem;
+}
+
+.headerButton {
+  font-size: 25px;
+}
