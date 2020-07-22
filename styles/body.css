@@ -1,7 +1,7 @@
 
 .mainContainer {
   justify-content: center;
-  border: 5px solid red;
+  /* border: 5px solid red; */
   display: flex
 }
 
@@ -9,52 +9,4 @@
   justify-content: center;
 }
 
-.entryFormContainer {
-margin: auto;
-margin-top: 1rem;
-margin-bottom: 1rem;
-width: 50rem;
-border: red solid 5px;
-display: flex;
-flex-direction: column;
-}
 
-.formField {
- display: flex;
- flex-direction: column;
-}
-
-.journalEntries {
-  
-}
-
-.journalContentRight {
-  margin: 10px;
-  text-align: center;
-}
-
-.journalContentLeft {
-  margin: 10px;
-}
-
-.journalEntry {
-  display: flex;
-  margin: 15px;
-  border: 5px red solid;
-  width: 90%;
-}
-
-.journalEntry__date {
-  margin: 5px;
-}
-
-.journalEntry__concepts {
-  margin: 5px;
-}
-
-.journalEntry__text {
-  margin: 5px;
-}
-.journalEntry__author {
-  margin: 5px;
-}
