@@ -35,20 +35,33 @@
     <main class="mainContainer" >
       
       <section class="contentMiddle" >
-        <div class="entryFormContainer" >
           <h2>Daily Journal</h2>
-        <form class="entryForm" action="">
-          <fieldset>
+        <form class="entryFormContainer" action="">
+          <!-- Enter fields for form below -->
+          <fieldset class="formField" >
             <label for="journalDate">Date of entry</label>
             <input type="date" name="journalDate" id="journalDate">
+          </fieldset>
+          <fieldset class="formField" >
             <label for="conceptsCovered">Concepts covered</label>
             <input type="text" name="conceptsCovered" id="conceptsCovered">
+          </fieldset>
+          <fieldset class="formField" >
             <label for="journalEntry">Journal Entry</label>
             <textarea name="journalEntry" id="journalEntry" cols="30" rows="2">Type your journal entry here</textarea>
-            
           </fieldset>
+          <fieldset class="formField" >
+            <label for="dailyMood">Mood for the day</label>
+            <select name="dailyMood" id="dailyMood">
+              <option value="overjoyed">Overjoyed</option>
+              <option value="happy">Happy</option>
+              <option value="sad">Sad</option>
+              <option value="miserable">Miserable</option>
+            </select>
+          </fieldset>
+          <button type="submit">Record Journal Entry</button>
         </form>
-        </div>
+        
         <!-- Entries will populate below in the article tag -->
         <div class="journalEntries"> 
           <!-- the following article tag will be an individual entry to later be automated -->
