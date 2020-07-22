@@ -33,7 +33,22 @@
   </header>
 
     <main class="mainContainer" >
+      
       <section class="contentMiddle" >
+        <div class="entryFormContainer" >
+          <h2>Daily Journal</h2>
+        <form class="entryForm" action="">
+          <fieldset>
+            <label for="journalDate">Date of entry</label>
+            <input type="date" name="journalDate" id="journalDate">
+            <label for="conceptsCovered">Concepts covered</label>
+            <input type="text" name="conceptsCovered" id="conceptsCovered">
+            <label for="journalEntry">Journal Entry</label>
+            <textarea name="journalEntry" id="journalEntry" cols="30" rows="2">Type your journal entry here</textarea>
+            
+          </fieldset>
+        </form>
+        </div>
         <!-- Entries will populate below in the article tag -->
         <div class="journalEntries"> 
           <!-- the following article tag will be an individual entry to later be automated -->

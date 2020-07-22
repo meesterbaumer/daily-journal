@@ -2,10 +2,24 @@
 .mainContainer {
   justify-content: center;
   border: 5px solid red;
+  display: flex
 }
 
 .contentMiddle {
-  
+  justify-content: center;
+}
+
+.entryFormContainer {
+margin: auto;
+margin-top: 1rem;
+margin-bottom: 1rem;
+width: 50rem;
+border: red solid 5px;
+}
+
+.entryForm {
+  display: flex;
+  flex-direction: column;
 }
 
 .journalEntries {
