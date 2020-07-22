@@ -1,1 +1,3 @@
-console.log("hi")
+import { EntryListComponent } from "./journalEntryList.js"
+
+EntryListComponent()

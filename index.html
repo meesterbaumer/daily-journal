@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="./styles/header.css">
   <link rel="stylesheet" href="./styles/body.css">
   <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/entries.css">
+  <link rel="stylesheet" href="./styles/form.css">
 </head>
 <body>
   <header>
@@ -55,6 +57,7 @@
             <select name="dailyMood" id="dailyMood">
               <option value="overjoyed">Overjoyed</option>
               <option value="happy">Happy</option>
+              <option value="meh">Meh...</option>
               <option value="sad">Sad</option>
               <option value="miserable">Miserable</option>
             </select>
@@ -63,36 +66,8 @@
         </form>
         
         <!-- Entries will populate below in the article tag -->
-        <div class="journalEntries"> 
-          <!-- the following article tag will be an individual entry to later be automated -->
-          <article class="journalEntry" >
-            <div class="journalContentLeft" >
-              <h3 class="journalEntry__date" >7/20/2020</h3>
-              <h4 class="journalEntry__concepts" >Concepts used: CSS, Java, HTML</h4>
-              <div class="journalEntry__text" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus neque similique ratione voluptatem in, hic illo officia id? Aliquid nostrum quaerat temporibus, quas, doloribus quos dolore distinctio quam unde ex odit nisi mollitia odio voluptatum corrupti voluptates voluptatibus eum deserunt. Rerum, unde sequi odit placeat iste nemo reprehenderit eligendi quia consequatur explicabo excepturi ut provident iure sed voluptatum, harum eos, debitis omnis perspiciatis esse quaerat quod pariatur laudantium sint. Modi fuga explicabo dolor, nihil magnam necessitatibus culpa omnis eligendi soluta illum ab cupiditate expedita enim consequatur nemo harum autem sequi quas. Nemo atque enim fugiat qui odio dignissimos repellendus neque. Architecto iusto amet animi molestias natus distinctio, eos maiores harum quisquam sed vel modi at iure ducimus suscipit magni temporibus aliquam officia. Laborum vitae temporibus deserunt expedita, autem quaerat minima libero praesentium eveniet neque perspiciatis est omnis, ad voluptatibus ducimus nulla voluptatem unde. Eligendi voluptatum mollitia atque aliquam possimus. Veniam!</div>
-              <h4 class="journalEntry__author" >by: Michael Baumer</h4>
-            </div>
-            <div class="journalContentRight" >
-                <aside class="entryOptions" >
-                  <button class="journalEntry__edit" >edit</button>
-                  <button class="journalEntry__delete" >delete</button>
-                </aside>
-            </div>
-          </article>
-          <article class="journalEntry" >
-            <div class="journalContentLeft" >
-              <h3 class="journalEntry__date" >7/20/2020</h3>
-              <h4 class="journalEntry__concepts" >Concepts used: CSS, Java, HTML</h4>
-              <div class="journalEntry__text" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus neque similique ratione voluptatem in, hic illo officia id? Aliquid nostrum quaerat temporibus, quas, doloribus quos dolore distinctio quam unde ex odit nisi mollitia odio voluptatum corrupti voluptates voluptatibus eum deserunt. Rerum, unde sequi odit placeat iste nemo reprehenderit eligendi quia consequatur explicabo excepturi ut provident iure sed voluptatum, harum eos, debitis omnis perspiciatis esse quaerat quod pariatur laudantium sint. Modi fuga explicabo dolor, nihil magnam necessitatibus culpa omnis eligendi soluta illum ab cupiditate expedita enim consequatur nemo harum autem sequi quas. Nemo atque enim fugiat qui odio dignissimos repellendus neque. Architecto iusto amet animi molestias natus distinctio, eos maiores harum quisquam sed vel modi at iure ducimus suscipit magni temporibus aliquam officia. Laborum vitae temporibus deserunt expedita, autem quaerat minima libero praesentium eveniet neque perspiciatis est omnis, ad voluptatibus ducimus nulla voluptatem unde. Eligendi voluptatum mollitia atque aliquam possimus. Veniam!</div>
-              <h4 class="journalEntry__author" >by: Michael Baumer</h4>
-            </div>
-            <div class="journalContentRight" >
-                <aside class="entryOptions" >
-                  <button class="journalEntry__edit" >edit</button>
-                  <button class="journalEntry__delete" >delete</button>
-                </aside>
-            </div>
-          </article>
+        <div class="journalEntries" id="entryLog" > 
+          
         </div>
       </section>
     </main>

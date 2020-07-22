@@ -1,0 +1,15 @@
+.entryFormContainer {
+  background-color:  sienna;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 50rem;
+  /* border: red solid 5px; */
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .formField {
+   display: flex;
+   flex-direction: column;
+  }

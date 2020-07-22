@@ -1,0 +1,39 @@
+.journalEntry {
+  background-color:whitesmoke;
+  border-radius: 1rem;
+  
+}
+.importedEntries {
+  flex-direction: column;
+  display: flex;
+}
+.journalContentRight {
+  margin: 10px;
+  text-align: center;
+}
+
+.journalContentLeft {
+  margin: 10px;
+}
+
+.journalEntry {
+  display: flex;
+  margin: 15px;
+  /* border: 5px red solid; */
+  width: 90%;
+}
+
+.journalEntry__date {
+  margin: 5px;
+}
+
+.journalEntry__concepts {
+  margin: 5px;
+}
+
+.journalEntry__text {
+  margin: 5px;
+}
+.journalEntry__author {
+  margin: 5px;
+}
