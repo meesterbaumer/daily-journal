@@ -5,34 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daily Journal</title>
   <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/body.css">
+  <link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
   <header>
-    <div class="logoContainer">
-      <img class="siteLogo" src="./images/siteLogoTemporary.png" alt="handwritten script style text that says DailyJournal">
-    </div>
-    <div class="headerRightContainer" >
-      <nav class="headerRightTop" >
-        <div>
-          <button class="headerButton" >View All</button>
-        </div>
-        <div>
-          <button class="headerButton" >Compose</button>
-        </div>
-      </nav>
-      <div class="headerRightBottom" >
-        <img  class="writingsOfImage" src="./images/WritingsOfTemporary.png" alt="handwritten script style text that says The writings of">
-        <h2 class="currentUser" >Michael Baumer</h2>
+    <section class="contentTop" >
+      <div class="logoContainer">
+        <img class="siteLogo" src="./images/siteLogoTemporary.png" alt="handwritten script style text that says DailyJournal">
       </div>
-    </div>
+      <div class="headerRightContainer" >
+        <nav class="headerRightTop" >
+          <div>
+            <button class="headerButton" >View All</button>
+          </div>
+          <div>
+            <button class="headerButton" >Compose</button>
+          </div>
+        </nav>
+        <div class="headerRightBottom" >
+          <img  class="writingsOfImage" src="./images/WritingsOfTemporary.png" alt="handwritten script style text that says The writings of">
+          <h2 class="currentUser" >Michael Baumer</h2>
+        </div>
+      </div>
+    </section>
   </header>
 
-  <main>
-
-  </main>
+    <main class="mainContainer" >
+      <section class="contentMiddle" >
+        <!-- Entries will populate below in the article tag -->
+        <div class="journalEntries"> 
+          <!-- the following article tag will be an individual entry to later be automated -->
+          <article class="journalEntry" >
+            <div class="journalContentLeft" >
+              <h3 class="journalEntry__date" >7/20/2020</h3>
+              <h4 class="journalEntry__concepts" >Concepts used: CSS, Java, HTML</h4>
+              <div class="journalEntry__text" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus neque similique ratione voluptatem in, hic illo officia id? Aliquid nostrum quaerat temporibus, quas, doloribus quos dolore distinctio quam unde ex odit nisi mollitia odio voluptatum corrupti voluptates voluptatibus eum deserunt. Rerum, unde sequi odit placeat iste nemo reprehenderit eligendi quia consequatur explicabo excepturi ut provident iure sed voluptatum, harum eos, debitis omnis perspiciatis esse quaerat quod pariatur laudantium sint. Modi fuga explicabo dolor, nihil magnam necessitatibus culpa omnis eligendi soluta illum ab cupiditate expedita enim consequatur nemo harum autem sequi quas. Nemo atque enim fugiat qui odio dignissimos repellendus neque. Architecto iusto amet animi molestias natus distinctio, eos maiores harum quisquam sed vel modi at iure ducimus suscipit magni temporibus aliquam officia. Laborum vitae temporibus deserunt expedita, autem quaerat minima libero praesentium eveniet neque perspiciatis est omnis, ad voluptatibus ducimus nulla voluptatem unde. Eligendi voluptatum mollitia atque aliquam possimus. Veniam!</div>
+              <h4 class="journalEntry__author" >by: Michael Baumer</h4>
+            </div>
+            <div class="journalContentRight" >
+                <aside class="entryOptions" >
+                  <button class="journalEntry__edit" >edit</button>
+                  <button class="journalEntry__delete" >delete</button>
+                </aside>
+            </div>
+          </article>
+          <article class="journalEntry" >
+            <div class="journalContentLeft" >
+              <h3 class="journalEntry__date" >7/20/2020</h3>
+              <h4 class="journalEntry__concepts" >Concepts used: CSS, Java, HTML</h4>
+              <div class="journalEntry__text" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus neque similique ratione voluptatem in, hic illo officia id? Aliquid nostrum quaerat temporibus, quas, doloribus quos dolore distinctio quam unde ex odit nisi mollitia odio voluptatum corrupti voluptates voluptatibus eum deserunt. Rerum, unde sequi odit placeat iste nemo reprehenderit eligendi quia consequatur explicabo excepturi ut provident iure sed voluptatum, harum eos, debitis omnis perspiciatis esse quaerat quod pariatur laudantium sint. Modi fuga explicabo dolor, nihil magnam necessitatibus culpa omnis eligendi soluta illum ab cupiditate expedita enim consequatur nemo harum autem sequi quas. Nemo atque enim fugiat qui odio dignissimos repellendus neque. Architecto iusto amet animi molestias natus distinctio, eos maiores harum quisquam sed vel modi at iure ducimus suscipit magni temporibus aliquam officia. Laborum vitae temporibus deserunt expedita, autem quaerat minima libero praesentium eveniet neque perspiciatis est omnis, ad voluptatibus ducimus nulla voluptatem unde. Eligendi voluptatum mollitia atque aliquam possimus. Veniam!</div>
+              <h4 class="journalEntry__author" >by: Michael Baumer</h4>
+            </div>
+            <div class="journalContentRight" >
+                <aside class="entryOptions" >
+                  <button class="journalEntry__edit" >edit</button>
+                  <button class="journalEntry__delete" >delete</button>
+                </aside>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
   <footer>
-
+    <section class="contentBottom" >
+      <h2 class="footer__author" >Michael Baumer</h2>
+      <a href="https://github.com/meesterbaumer" target="_blank" ><img src="./images/githubLogo.png" alt=""></a>
+      <h2 class="footer__copyright" >© 2020 MeesterB, Inc.</h2>
+    </section>
   </footer>
 </body>
 <script type="module" src="./scripts/main.js"></script>
