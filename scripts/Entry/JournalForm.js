@@ -1,5 +1,7 @@
-export const FormHTMLConverter = () => {
-  return `
+const entryLocation = document.querySelector(".entryFormContainer")
+
+export const RenderForm = () => {
+  entryLocation.innerHTML = `
   <form class="entryForm" action="">
     <fieldset class="formField" >
       <label for="journalDate">Date of entry</label>
@@ -25,5 +27,5 @@ export const FormHTMLConverter = () => {
     </fieldset>
     <button class="submit--button" type="submit">Record Journal Entry</button>
   </form>
-  `
+`
 }

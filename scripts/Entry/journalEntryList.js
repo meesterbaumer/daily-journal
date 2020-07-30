@@ -5,7 +5,7 @@
  *    data provider component
  */
 import { useJournalEntries, getEntries } from "./JournalDataProvider.js"
-import { JournalEntryComponent } from "./JournalEntry.js"
+import { JournalEntryComponent } from "./JournalEntryHTML.js"
 
 export const EntryList = () => {
   getEntries()
