@@ -9,7 +9,7 @@
 }
 .journalContentRight {
   margin: 10px;
-  text-align: center;
+  
 }
 
 .journalContentLeft {
@@ -21,6 +21,7 @@
   margin: 15px;
   /* border: 5px red solid; */
   width: 90%;
+  justify-content: space-between;
 }
 
 .journalEntry__date {
