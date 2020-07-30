@@ -1,4 +1,13 @@
 const entryLocation = document.querySelector(".entryFormContainer")
+const eventHub = document.querySelector(".eventHub")
+
+eventHub.addEventListener("click", clickEvent => {
+  if (clickEvent.target.id === "submit--button") {
+
+    const 
+
+  }
+})
 
 export const RenderForm = () => {
   entryLocation.innerHTML = `
