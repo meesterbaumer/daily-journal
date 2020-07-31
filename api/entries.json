@@ -15,11 +15,25 @@
       "mood": "happy"
     },
     {
-      "id": 3,
-      "date": "07/26/2025",
-      "concept": "javascript",
-      "entry": "Today we learned how javascript allows us to interact with our page.",
-      "mood": "happy"
+      "date": "2020-07-06",
+      "concept": "fgntgnb",
+      "entry": "Type your journal entry here",
+      "mood": "overjoyed",
+      "id": 3
+    },
+    {
+      "date": "2020-07-14",
+      "concept": "",
+      "entry": "Type your journal entry here",
+      "mood": "overjoyed",
+      "id": 4
+    },
+    {
+      "date": "2020-04-29",
+      "concept": "",
+      "entry": "Type your journal entry here",
+      "mood": "overjoyed",
+      "id": 5
     }
   ]
 }

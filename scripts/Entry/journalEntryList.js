@@ -4,8 +4,17 @@
  *    there are items in the collection exposed by the
  *    data provider component
  */
-import { useJournalEntries, getEntries } from "./JournalDataProvider.js"
+import { useJournalEntries, getEntries } from "./journalDataProvider.js"
 import { JournalEntryComponent } from "./JournalEntryHTML.js"
+
+const eventHub = document.querySelector(".eventHub")
+const contentTarget = document.querySelector("#entryLog")
+
+eventHub.addEventListener("journalStateChanged", () => {
+  const newEntries = useJournalEntries()
+  render(newEntries)
+})
+
 
 export const EntryList = () => {
   getEntries()
@@ -21,7 +30,7 @@ const render = (entryArr) => {
         
         entryHTMLRepresentations += JournalEntryComponent(entry)
     }
-  entryLog.innerHTML += `
+  contentTarget.innerHTML = `
     <div class="importedEntries" >
     ${entryHTMLRepresentations}
     </div>

@@ -1,17 +1,29 @@
+import { saveJournalEntry } from "./journalDataProvider.js"
+
 const entryLocation = document.querySelector(".entryFormContainer")
 const eventHub = document.querySelector(".eventHub")
 
 eventHub.addEventListener("click", clickEvent => {
-  if (clickEvent.target.id === "submit--button") {
+  if (clickEvent.target.id === "subButton") {
+    
+    const journalDate = document.querySelector("#journalDate")
+    const journalConcepts = document.querySelector("#conceptsCovered")
+    const journalEntry = document.querySelector("#journalEntry")
+    const journalMood = document.querySelector("#dailyMood")
 
-    const 
-
+    const newEntry = {
+      date: journalDate.value,
+      concept: journalConcepts.value,
+      entry: journalEntry.value,
+      mood: journalMood.value
+    }
+    saveJournalEntry(newEntry)
   }
 })
 
 export const RenderForm = () => {
   entryLocation.innerHTML = `
-  <form class="entryForm" action="">
+  <div class="entryForm">
     <fieldset class="formField" >
       <label for="journalDate">Date of entry</label>
       <input type="date" name="journalDate" id="journalDate">
@@ -34,7 +46,7 @@ export const RenderForm = () => {
         <option value="miserable">Miserable</option>
       </select>
     </fieldset>
-    <button class="submit--button" type="submit">Record Journal Entry</button>
-  </form>
+    <button class="submit--button" id="subButton" type="submit">Record Journal Entry</button>
+  </div>
 `
 }

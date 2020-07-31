@@ -3,7 +3,9 @@ let entries = []
 const eventHub = document.querySelector(".eventHub")
 
 const dispatchStateChangeEvent = () => {
-  eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
+  const entryStateChangeEvent = new CustomEvent("journalStateChanged")
+  
+  eventHub.dispatchEvent(entryStateChangeEvent)
 }
 
 export const getEntries = () => {
@@ -32,5 +34,6 @@ export const saveJournalEntry = (entryObj) => {
   })
   .then(getEntries)
   .then(dispatchStateChangeEvent)
+  
 }
 
