@@ -1,15 +1,21 @@
 .entryFormContainer {
-  background-color:  sienna;
-  margin: auto;
+  background-color:  rgb(48, 250, 172);
   margin-top: 1rem;
   margin-bottom: 1rem;
-  width: 50rem;
-  /* border: red solid 5px; */
+  border: black solid 5px;
+  border-radius: 2rem;
   display: flex;
-  flex-direction: column;
+  padding: 1rem;
+  }
+
+  .entryForm {
+    
   }
   
   .formField {
+   border-radius: .5rem;
+   border: none;
+   margin: .5rem;
    display: flex;
    flex-direction: column;
   }
