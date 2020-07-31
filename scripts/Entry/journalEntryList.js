@@ -4,7 +4,7 @@
  *    there are items in the collection exposed by the
  *    data provider component
  */
-import { useJournalEntries, getEntries } from "./journalDataProvider.js"
+import { useJournalEntries, getEntries } from "./JournalDataProvider.js"
 import { JournalEntryComponent } from "./JournalEntryHTML.js"
 
 const eventHub = document.querySelector(".eventHub")
