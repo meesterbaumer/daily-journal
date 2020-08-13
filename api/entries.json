@@ -6,20 +6,6 @@
       "entry": "Type your journal entry here",
       "moodId": "1",
       "id": 1
-    },
-    {
-      "date": "2020-08-12",
-      "concept": "",
-      "entry": "Type your journal entry here",
-      "moodId": "4",
-      "id": 2
-    },
-    {
-      "date": "2020-08-26",
-      "concept": "ngfng",
-      "entry": "I think it may work!!!",
-      "moodId": "2",
-      "id": 3
     }
   ],
   "moods": [
