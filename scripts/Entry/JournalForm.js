@@ -15,7 +15,7 @@ eventHub.addEventListener("click", clickEvent => {
       date: journalDate.value,
       concept: journalConcepts.value,
       entry: journalEntry.value,
-      mood: journalMood.value
+      moodId: journalMood.value
     }
     saveJournalEntry(newEntry)
   }
@@ -39,11 +39,11 @@ export const RenderForm = () => {
     <fieldset class="formField" >
       <label for="dailyMood">Mood for the day</label>
       <select name="dailyMood" id="dailyMood">
-        <option value="overjoyed">Overjoyed</option>
-        <option value="happy">Happy</option>
-        <option value="meh">Meh...</option>
-        <option value="sad">Sad</option>
-        <option value="miserable">Miserable</option>
+        <option value="1">Overjoyed</option>
+        <option value="2">Happy</option>
+        <option value="3">Meh...</option>
+        <option value="4">Sad</option>
+        <option value="5">Miserable</option>
       </select>
     </fieldset>
     <button class="submit--button" id="subButton" type="submit">Record Journal Entry</button>

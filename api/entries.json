@@ -1,32 +1,40 @@
 {
   "entries": [
     {
-      "date": "2020-08-12",
-      "concept": "javascript",
-      "entry": "hello",
-      "mood": "overjoyed",
+      "date": "2020-08-06",
+      "concept": "",
+      "entry": "Type your journal entry here",
+      "moodId": "1",
       "id": 1
     },
     {
-      "date": "2020-08-09",
-      "concept": "89",
-      "entry": "89",
-      "mood": "overjoyed",
-      "id": 2
-    },
-    {
-      "date": "2020-08-13",
-      "concept": "13",
-      "entry": "13",
-      "mood": "overjoyed",
-      "id": 3
-    },
-    {
-      "date": "2020-07-29",
-      "concept": "feet",
+      "date": "2020-08-12",
+      "concept": "",
       "entry": "Type your journal entry here",
-      "mood": "overjoyed",
-      "id": 4
+      "moodId": "4",
+      "id": 2
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Overjoyed"
+    },
+    {
+      "id": 2,
+      "label": "Happy"
+    },
+    {
+      "id": 3,
+      "label": "Meh..."
+    },
+    {
+      "id": 4,
+      "label": "Sad"
+    },
+    {
+      "id": 5,
+      "label": "Miserable"
     }
   ]
 }
