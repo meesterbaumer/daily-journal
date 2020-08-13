@@ -1,31 +1,31 @@
 {
   "entries": [
     {
-      "id": 1,
-      "date": "07/24/2025",
-      "concept": "HTML & CSS",
-      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "mood": "overjoyed"
+      "date": "2020-08-12",
+      "concept": "javascript",
+      "entry": "hello",
+      "mood": "overjoyed",
+      "id": 1
     },
     {
-      "id": 2,
-      "date": "07/26/2025",
-      "concept": "Flexbox",
-      "entry": "We learned how to use flexbox to manipulate code in our HTML",
-      "mood": "happy"
+      "date": "2020-08-09",
+      "concept": "89",
+      "entry": "89",
+      "mood": "overjoyed",
+      "id": 2
     },
     {
-      "date": "2020-06-10",
-      "concept": "hhh",
-      "entry": "Type your jodfbfburnal entry here",
-      "mood": "sad",
+      "date": "2020-08-13",
+      "concept": "13",
+      "entry": "13",
+      "mood": "overjoyed",
       "id": 3
     },
     {
-      "date": "2020-06-12",
-      "concept": "hhh",
-      "entry": "Type your jodfbfburnal entry here",
-      "mood": "sad",
+      "date": "2020-07-29",
+      "concept": "feet",
+      "entry": "Type your journal entry here",
+      "mood": "overjoyed",
       "id": 4
     }
   ]

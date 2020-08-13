@@ -34,7 +34,7 @@ export const RenderForm = () => {
     </fieldset>
     <fieldset class="formField" >
       <label for="journalEntry">Journal Entry</label>
-      <textarea name="journalEntry" id="journalEntry" cols="30" rows="2">Type your journal entry here</textarea>
+      <textarea name="journalEntry" id="journalEntry" cols="70" rows="6">Type your journal entry here</textarea>
     </fieldset>
     <fieldset class="formField" >
       <label for="dailyMood">Mood for the day</label>

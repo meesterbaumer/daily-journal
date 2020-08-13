@@ -19,8 +19,6 @@
 .journalEntry {
   display: flex;
   margin: 15px;
-  /* border: 5px red solid; */
-  width: 90%;
   justify-content: space-between;
 }
 
