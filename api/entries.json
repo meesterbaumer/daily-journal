@@ -6,6 +6,13 @@
       "entry": "Type your journal entry here",
       "moodId": "1",
       "id": 1
+    },
+    {
+      "date": "2020-08-14",
+      "concept": "Testing",
+      "entry": "Hiiiii",
+      "moodId": "3",
+      "id": 2
     }
   ],
   "moods": [
