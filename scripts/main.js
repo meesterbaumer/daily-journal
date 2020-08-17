@@ -1,7 +1,7 @@
 import { EntryList } from "./Entry/JournalEntryList.js";
-import { RenderForm } from "./Entry/JournalForm.js";
+import { renderEntryForm } from "./Entry/JournalForm.js";
+import { getMoods } from "./Entry/MoodProvider.js";
 
 
-
-RenderForm()
+renderEntryForm()
 EntryList()
