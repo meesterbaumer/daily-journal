@@ -1,3 +1,15 @@
+import { deleteJournalEntry } from "./JournalDataProvider.js"
+
+const eventHub = document.querySelector(".eventHub")
+
+eventHub.addEventListener("click", event => {
+  if (event.target.id.startsWith("journalEntry__delete--")) {
+    const [a, id] = event.target.id.split("--")
+
+    deleteJournalEntry(id)
+  }
+})
+
 /*
  *  Purpose: To render a single journal entry as an
  *           HTML representation of the data
@@ -15,7 +27,7 @@ export const JournalEntryComponent = (entry) => {
     <div class="journalContentRight" >
         <aside class="entryOptions" >
           <button class="journalEntry__edit" >edit</button>
-          <button class="journalEntry__delete" >delete</button>
+          <button class="journalEntry__delete" id="journalEntry__delete--${entry.id}">Delete</button>
         </aside>
     </div>
   </article>      
