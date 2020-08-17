@@ -21,13 +21,27 @@ eventHub.addEventListener("click", clickEvent => {
     const journalEntry = document.querySelector("#journalEntry")
     const journalMood = document.querySelector("#dailyMood")
 
-    const newEntry = {
-      date: journalDate.value,
-      concept: journalConcepts.value,
-      entry: journalEntry.value,
-      moodId: journalMood.value
+    const journalMoodId = parseInt(journalMood.value)
+
+    if (journalMoodId !== 0) {
+
+      const newEntry = {
+        date: journalDate.value,
+        concept: journalConcepts.value,
+        entry: journalEntry.value,
+        moodId: journalMood.value
+      }
+      saveJournalEntry(newEntry)
+      journalDate.value=""
+      journalConcepts.value=""
+      journalEntry.value=""
+      journalMood.value=""
+
     }
-    saveJournalEntry(newEntry)
+    else {
+      window.alert("Be sure to select a mood before saving")
+    }
+
   }
 })
 
@@ -40,15 +54,16 @@ export const renderForm = (allMoods) => {
     </fieldset>
     <fieldset class="formField" >
       <label for="conceptsCovered">Concepts covered</label>
-      <input type="text" name="conceptsCovered" id="conceptsCovered">
+      <input type="text" name="conceptsCovered" placeholder="ex. JavaScript, CSS" id="conceptsCovered">
     </fieldset>
     <fieldset class="formField" >
       <label for="journalEntry">Journal Entry</label>
-      <textarea name="journalEntry" id="journalEntry" cols="70" rows="6">Type your journal entry here</textarea>
+      <textarea name="journalEntry" id="journalEntry" cols="70" placeholder="Type your journal entry here." rows="6"></textarea>
     </fieldset>
     <fieldset class="formField" >
       <label for="dailyMood">Mood for the day</label>
       <select name="dailyMood" id="dailyMood">
+        <option value="0">Select your mood</option>
         ${
           allMoods.map(
             (mood) => {
