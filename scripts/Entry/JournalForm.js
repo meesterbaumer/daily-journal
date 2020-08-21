@@ -72,6 +72,16 @@ export const renderForm = (allMoods) => {
           ).join("")
         }
       </select>
+      <select name="instructor" id="instructor">
+        <option value="0">Select your instructor</option>
+        ${
+          allInstruc.map(
+            (instructor) => {
+              return `<option value=${instructor.id}>${instructor.firstName}${instructor.lastName}</option>`
+            }
+          ).join("")
+        }
+      </select>
     </fieldset>
     <button class="submit--button" id="subButton" type="submit">Record Journal Entry</button>
   </div>
