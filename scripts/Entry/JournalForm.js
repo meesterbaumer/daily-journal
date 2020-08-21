@@ -5,13 +5,17 @@ import { getInstructors, useInstructors } from "./instructorProvider.js";
 const entryLocation = document.querySelector(".entryFormContainer")
 const eventHub = document.querySelector(".eventHub")
 
+let instructors = []
+let moods = []
+
+
 export const renderEntryForm = () => {
   getMoods()
     .then(getInstructors)
     .then(() => {
-      const moods = useMoods()
-      const instructors = useInstructors()
-      renderForm(moods, instructors)
+      moods = useMoods()
+      instructors = useInstructors()
+      renderForm()
     })
   
 }
@@ -52,7 +56,7 @@ eventHub.addEventListener("click", clickEvent => {
   }
 })
 
-export const renderForm = (moods, instructors) => {
+export const renderForm = () => {
   entryLocation.innerHTML = `
   <div class="entryForm">
     <fieldset class="formField" >
