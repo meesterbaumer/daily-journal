@@ -1,14 +1,17 @@
 import { saveJournalEntry, useJournalEntries } from "./JournalDataProvider.js"
 import { getMoods, useMoods } from "./MoodProvider.js";
+import { getInstructors, useInstructors } from "./instructorProvider.js";
 
 const entryLocation = document.querySelector(".entryFormContainer")
 const eventHub = document.querySelector(".eventHub")
 
 export const renderEntryForm = () => {
   getMoods()
+    .then(getInstructors)
     .then(() => {
       const moods = useMoods()
-      renderForm(moods)
+      const instructors = useInstructors()
+      renderForm(moods, instructors)
     })
   
 }
@@ -20,32 +23,36 @@ eventHub.addEventListener("click", clickEvent => {
     const journalConcepts = document.querySelector("#conceptsCovered")
     const journalEntry = document.querySelector("#journalEntry")
     const journalMood = document.querySelector("#dailyMood")
+    const journalInstructor = document.querySelector("#instructor")
 
     const journalMoodId = parseInt(journalMood.value)
+    const journalInstructorId = parseInt(journalInstructor.value)
 
-    if (journalMoodId !== 0) {
+    if (journalMoodId !== 0 && journalInstructorId !== 0) {
 
       const newEntry = {
         date: journalDate.value,
         concept: journalConcepts.value,
         entry: journalEntry.value,
-        moodId: journalMood.value
+        moodId: journalMood.value,
+        instructorId: journalInstructor.value
       }
       saveJournalEntry(newEntry)
       journalDate.value=""
       journalConcepts.value=""
       journalEntry.value=""
       journalMood.value=""
+      journalInstructor.value=""
 
     }
     else {
-      window.alert("Be sure to select a mood before saving")
+      window.alert("Be sure to select a mood & instructor before saving")
     }
 
   }
 })
 
-export const renderForm = (allMoods) => {
+export const renderForm = (moods, instructors) => {
   entryLocation.innerHTML = `
   <div class="entryForm">
     <fieldset class="formField" >
@@ -65,17 +72,18 @@ export const renderForm = (allMoods) => {
       <select name="dailyMood" id="dailyMood">
         <option value="0">Select your mood</option>
         ${
-          allMoods.map(
+          moods.map(
             (mood) => {
               return `<option value=${mood.id}>${mood.label}</option>`
             }
           ).join("")
         }
       </select>
+      <label for="instructor">Instructor</label>
       <select name="instructor" id="instructor">
         <option value="0">Select your instructor</option>
         ${
-          allInstruc.map(
+          instructors.map(
             (instructor) => {
               return `<option value=${instructor.id}>${instructor.firstName}${instructor.lastName}</option>`
             }
