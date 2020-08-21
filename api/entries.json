@@ -1,10 +1,10 @@
 {
   "entries": [
     {
-      "date": "2020-07-28",
-      "concept": "gffgnf",
-      "entry": "gxnfxg",
-      "moodId": "1",
+      "date": "2020-08-20",
+      "concept": "JavaScript",
+      "entry": "Today we learned about traversing multiple tables of data and how to use join tables to connect them.",
+      "moodId": "2",
       "instructorId": "1",
       "id": 1
     }
