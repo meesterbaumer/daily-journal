@@ -1,20 +1,12 @@
 {
   "entries": [
     {
-      "date": "2020-08-20",
-      "concept": "JavaScript",
-      "entry": "Today we learned about traversing multiple tables of data and how to use join tables to connect them.",
-      "moodId": "2",
-      "instructorId": "1",
-      "id": 1
-    },
-    {
-      "date": "2020-08-24",
-      "concept": "JavaScript",
-      "entry": "hello testing ",
+      "date": "2020-08-04",
+      "concept": "css",
+      "entry": "ttttttttttttttt",
       "moodId": "1",
       "instructorId": "1",
-      "id": 2
+      "id": 1
     }
   ],
   "moods": [

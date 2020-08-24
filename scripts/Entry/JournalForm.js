@@ -1,4 +1,4 @@
-import { saveJournalEntry, useJournalEntries } from "./JournalDataProvider.js"
+import { saveJournalEntry, useJournalEntries, editEntry, getEntries } from "./JournalDataProvider.js"
 import { getMoods, useMoods } from "./MoodProvider.js";
 import { getInstructors, useInstructors } from "./instructorProvider.js";
 
@@ -8,18 +8,6 @@ const eventHub = document.querySelector(".eventHub")
 let instructors = []
 let moods = []
 
-
-export const renderEntryForm = () => {
-  getMoods()
-    .then(getInstructors)
-    .then(() => {
-      moods = useMoods()
-      instructors = useInstructors()
-      renderForm()
-    })
-  
-}
-
 eventHub.addEventListener("click", clickEvent => {
   if (clickEvent.target.id === "subButton") {
     
@@ -28,6 +16,7 @@ eventHub.addEventListener("click", clickEvent => {
     const journalEntry = document.querySelector("#journalEntry")
     const journalMood = document.querySelector("#dailyMood")
     const journalInstructor = document.querySelector("#instructor")
+    const id = document.querySelector("#entryId").value
 
     const journalMoodId = parseInt(journalMood.value)
     const journalInstructorId = parseInt(journalInstructor.value)
@@ -41,12 +30,32 @@ eventHub.addEventListener("click", clickEvent => {
         moodId: journalMood.value,
         instructorId: journalInstructor.value
       }
-      saveJournalEntry(newEntry)
-      journalDate.value=""
-      journalConcepts.value=""
-      journalEntry.value=""
-      journalMood.value=""
-      journalInstructor.value=""
+      const updatedEntry = {
+        date: journalDate.value,
+        concept: journalConcepts.value,
+        entry: journalEntry.value,
+        moodId: journalMood.value,
+        instructorId: journalInstructor.value,
+        id: parseInt(id)
+      }
+
+      if(id === "") {
+        saveJournalEntry(newEntry)
+        journalDate.value=""
+        journalConcepts.value=""
+        journalEntry.value=""
+        journalMood.value=""
+        journalInstructor.value=""
+      } else {
+          editEntry(updatedEntry)
+          journalDate.value=""
+          journalConcepts.value=""
+          journalEntry.value=""
+          journalMood.value=""
+          journalInstructor.value=""
+          
+      }
+      
 
     }
     else {
@@ -56,9 +65,43 @@ eventHub.addEventListener("click", clickEvent => {
   }
 })
 
+eventHub.addEventListener("editEntryClicked", cEvent => {
+  renderForm()
+  const entries = useJournalEntries()
+  const entryId = cEvent.detail.entryId
+  const objToEdit = entries.find(entry => entryId === entry.id)
+
+  const journalDate = document.querySelector("#journalDate")
+  const journalConcepts = document.querySelector("#conceptsCovered")
+  const journalEntry = document.querySelector("#journalEntry")
+  const journalMood = document.querySelector("#dailyMood")
+  const journalInstructor = document.querySelector("#instructor")
+  const id = document.querySelector("#entryId")
+
+  journalDate.value = objToEdit.date
+  journalConcepts.value = objToEdit.concept
+  journalEntry.value = objToEdit.entry
+  journalMood.value = objToEdit.moodId
+  journalInstructor.value = objToEdit.instructorId
+  id.value = parseInt(entryId)
+
+})
+
+export const renderEntryForm = () => {
+  getMoods()
+    .then(getInstructors)
+    .then(() => {
+      moods = useMoods()
+      instructors = useInstructors()
+      renderForm()
+    })
+  
+}
+
 export const renderForm = () => {
   entryLocation.innerHTML = `
   <div class="entryForm">
+    <input type="hidden" name="entryId" id="entryId" value="">
     <fieldset class="formField" >
       <label for="journalDate">Date of entry</label>
       <input type="date" name="journalDate" id="journalDate">

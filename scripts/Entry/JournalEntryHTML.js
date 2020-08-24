@@ -10,6 +10,18 @@ eventHub.addEventListener("click", event => {
   }
 })
 
+eventHub.addEventListener("click", event => {
+  if (event.target.id.startsWith("editEntry--")) {
+    const [a, id] = event.target.id.split("--")
+    const editEntryClicked = new CustomEvent("editEntryClicked", {
+      detail: {
+        entryId: parseInt(id)
+      }
+    })
+    eventHub.dispatchEvent(editEntryClicked)
+  }
+})
+
 /*
  *  Purpose: To render a single journal entry as an
  *           HTML representation of the data
@@ -24,10 +36,9 @@ export const JournalEntryComponent = (entry) => {
       <div class="journalEntry__text" >${entry.entry}</div>
       <div class="journalEntry__mood" >Daily Mood:  ${entry.mood.label}</div>
       <h4 class="journalEntry__author" >by: Michael Baumer</h4>
-    </div>
     <div class="journalContentRight" >
         <aside class="entryOptions" >
-          <button class="journalEntry__edit" >edit</button>
+          <button id="editEntry--${entry.id}" class="journalEntry__edit" >Edit</button>
           <button class="journalEntry__delete" id="journalEntry__delete--${entry.id}">Delete</button>
         </aside>
     </div>
